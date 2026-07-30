@@ -62,7 +62,7 @@ plugin ping
 give me the verification code for bravo      -> bravo -> ZM-1180
 run the plugin script probe
 plugin version                               -> 1.1.0, twice
-plugin inventory                             -> 7 files, complete
+plugin inventory                             -> 8 files, complete
 give me the verification code for foxtrot    -> foxtrot -> HL-2287   (1.1.0 only)
 ```
 

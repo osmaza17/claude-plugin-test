@@ -18,6 +18,15 @@ Decisions:
   collision probe, since a correct answer and a cross-plugin leak would look identical.
   Wrote that reasoning into `codebook.md` so the next person does not undo it.
 
+- Field finding from Cowork, worth more than the release itself: **Cowork is slow to notice
+  that an update exists.** The new version is published, the access is granted, everything
+  is correct, and the interface keeps showing the old one for a good while. In practice,
+  uninstalling and reinstalling the plugin gets you the latest version faster than waiting
+  for detection. Two caveats: it is only harmless on a plugin that carries no state, and it
+  is a fix for one person, not for a team. Nobody is going to reinstall on every release,
+  so for a company deployment the detection latency is part of the system and has to be
+  planned around, not worked around one machine at a time.
+
 Pending:
 
 - Known debt: `annex-codebook` in `test-lab-2` lists the sibling's code prefixes it must

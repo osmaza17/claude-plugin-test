@@ -9,8 +9,8 @@
     {
       "name": "test-lab",
       "source": "./plugins/test-lab",
-      "description": "Three probe skills that each verify a different plugin mechanism: skill loading, bundled reference files, and bundled scripts.",
-      "version": "1.0.0"
+      "description": "Five probe skills that each verify a different plugin mechanism: skill loading, bundled reference files, bundled scripts, update propagation, and sync completeness.",
+      "version": "1.1.0"
     }
   ]
 }

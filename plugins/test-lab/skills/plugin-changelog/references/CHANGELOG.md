@@ -2,6 +2,13 @@
 
 Newest first.
 
+## 1.3.0
+
+No new skills. A version bump on purpose, to test whether Cowork offers an update button or
+syncs on its own once the Claude GitHub App has access to the repository. Codebook gained
+`hotel` (`HT-9948`) as the 1.3.0 stale-file marker.
+
+
 ## 1.2.0
 
 Added `plugin-selftest` (runs all probes, one pass/fail table) and `plugin-changelog` (this

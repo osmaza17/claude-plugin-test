@@ -14,11 +14,11 @@ Do all five, in this order, using the instructions in each skill's own `SKILL.md
 |---|---|---|
 | 1 | ping | it answers `PONG` and names the plugin |
 | 2 | version | `plugin.json` reads 1.1.0 or higher |
-| 3 | codebook | `golf` returns `GF-7126` |
+| 3 | codebook | `hotel` returns `HT-9948` |
 | 4 | script | `probe.py` runs and prints an existing plugin root |
 | 5 | inventory | the file list matches what the version ships |
 
-Use `golf` for probe 3, not an earlier keyword. It was added in 1.2.0, so an older cached
+Use `hotel` for probe 3, not an earlier keyword. It was added in 1.3.0, so an older cached
 `codebook.md` fails it while `alpha` would still pass and hide the problem.
 
 Report one row per probe: `<probe>  <pass|fail>  <one clause of evidence>`. Then a final

@@ -7,7 +7,7 @@ mechanism is broken.
 The repo ships two plugins from one catalogue. Each skill probes a different mechanism, so
 a partial failure is still diagnosable.
 
-### `test-lab` (1.2.0)
+### `test-lab` (1.3.0)
 
 | Skill | Probes | Passes when |
 |---|---|---|
@@ -46,7 +46,10 @@ partial update is visible instead of silent:
 - **A brand new bundled file.** `CHANGELOG.md` ships for the first time in 1.2.0, which is
   a different case from modifying a file that already existed.
 
-Keyword per release: `foxtrot` in 1.1.0, `golf` in 1.2.0.
+Keyword per release: `foxtrot` in 1.1.0, `golf` in 1.2.0, `hotel` in 1.3.0.
+
+A release does not need new skills. 1.3.0 ships none: the version bump alone is the signal
+a client uses to decide there is something to fetch.
 
 ## Install
 
@@ -80,9 +83,9 @@ old catalogue and reports that the plugin is up to date.
 ```
 plugin selftest                              -> the whole table at once
 plugin ping
-plugin version                               -> floor 1.1.0, manifest 1.2.0
+plugin version                               -> floor 1.1.0, manifest 1.3.0
 plugin inventory                             -> 11 files, complete
-give me the verification code for golf       -> golf -> GF-7126      (1.2.0 only)
+give me the verification code for hotel      -> hotel -> HT-9948     (1.3.0 only)
 plugin changelog                             -> what each version added
 annex ping                                   -> PONG-2, separate root
 give me the annex code for juliet            -> juliet -> BC-8809

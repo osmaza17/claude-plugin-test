@@ -2,6 +2,36 @@
 
 Newest entry first.
 
+## 30 07 2026 — test-lab 1.3.0, and the GitHub App finding
+
+Cowork refused to auto-sync the marketplace with: *"La synchronisation automatique
+nécessite que l'application Claude GitHub ait accès à ce dépôt."* So **a public repo is not
+enough**. Cowork syncs through the Claude GitHub App's installation token, not anonymous
+HTTPS, and the app has to be granted access to the repository even when anyone can clone
+it. The docs state this for organization marketplaces; it turns out to apply to personal
+ones too. This is the least obvious result of the whole exercise and the one that would
+bite someone setting this up for a team.
+
+1.3.0 exists only to give an already-installed 1.2.0 something to update to, now that
+access is granted, and to see whether Cowork offers a button or syncs on its own.
+
+Decisions:
+
+- **No new skills.** A release does not need them: the version bump alone is the signal a
+  client uses to decide there is something to fetch, and testing that in isolation is
+  cleaner than bundling it with new content. Only the marker keyword `hotel` (`HT-9948`)
+  and the changelog entry changed.
+- `plugin-selftest` moved to `hotel` for its codebook probe, per the standing rule that the
+  selftest always uses the newest keyword.
+
+Pending:
+
+- Whether Cowork shows a button or updates silently. That is the whole point of 1.3.0.
+- `raw.githubusercontent.com` served a stale `marketplace.json` for a couple of minutes
+  after the 1.2.0 push, while the API returned the new one immediately. Worth remembering
+  before diagnosing a sync as broken: wait, then check again.
+
+
 ## 30 07 2026 — test-lab 1.2.0 and a second plugin, test-lab-2 1.0.0
 
 Two things at once, because they answer two different questions. `test-lab` goes to 1.2.0

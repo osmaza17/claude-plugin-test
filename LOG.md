@@ -2,6 +2,44 @@
 
 Newest entry first.
 
+## 30 07 2026 — test-lab 1.2.0 and a second plugin, test-lab-2 1.0.0
+
+Two things at once, because they answer two different questions. `test-lab` goes to 1.2.0
+with `plugin-selftest` and `plugin-changelog`, so the update button has something to
+offer an install already sitting at 1.1.0. And a second plugin, `test-lab-2`, joins the
+same catalogue, to see whether a plugin added *after* a marketplace was added shows up at
+all.
+
+Context: 1.1.0 was installed in Cowork and its update button was greyed out, correctly, it
+was already the newest version. This release is what makes that button live.
+
+Decisions:
+
+- `annex-codebook` ships its file at the same relative path as `plugin-codebook`
+  (`references/codebook.md`) on purpose, with codes from a disjoint prefix set. Two plugins
+  sharing a filename is exactly the case where a collision would be silent, so the probe
+  is built to make it loud.
+- Dropped the "Probe N of M" numbering from every skill. It was already wrong (`4 of 5`
+  next to `3 of 3`) and every release would break it again. Each skill now names the
+  mechanism it probes instead of its position.
+- `plugin-version` now states a **floor**, not an exact version. It said "shipped in 1.1.0"
+  and demanded a match, which would have reported a false partial sync the moment the
+  plugin reached 1.2.0 without that file changing. A floor needs no maintenance.
+- `plugin-selftest` is told to use the newest codebook keyword, `golf`. An older keyword
+  passes on a stale file, so a selftest that used `alpha` would report green on exactly the
+  failure it exists to catch.
+- Bumped only `test-lab`. `test-lab-2` starts at 1.0.0 and its version moves independently,
+  which is the point of two plugins in one catalogue.
+
+Pending:
+
+- Whether Cowork lists a plugin added to an already-added marketplace without re-adding the
+  marketplace. That is the open question this release exists to answer.
+- The expected-file list in `plugin-inventory` still needs a manual edit per release. It is
+  now wrong-by-default rather than silently stale, since the count is stated, but it is
+  still the first thing to break if someone adds a skill and forgets.
+
+
 ## 30 07 2026 — v1.1.0, two probes for update propagation
 
 Added `plugin-version` and `plugin-inventory`, bumped to 1.1.0 in both manifests. Purpose:

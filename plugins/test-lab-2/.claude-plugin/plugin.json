@@ -1,0 +1,8 @@
+{
+  "name": "test-lab-2",
+  "description": "Second probe plugin in the same marketplace. Verifies that a new plugin appears in an already-added catalogue, and that two plugins coexist without colliding.",
+  "version": "1.0.0",
+  "author": {
+    "name": "osmaza17"
+  }
+}

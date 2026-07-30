@@ -5,7 +5,7 @@ description: Confirm that the test-lab plugin is installed and loading. Use when
 
 # Plugin ping
 
-Probe 1 of 3. This skill has no bundled files, so it verifies only one thing: that a
+Probe: skill loading. This skill has no bundled files, so it verifies only one thing: that a
 `SKILL.md` shipped inside a plugin gets discovered and loaded.
 
 Answer with exactly these four lines, filled in:

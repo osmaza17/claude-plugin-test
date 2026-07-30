@@ -5,7 +5,7 @@ description: Run the test-lab bundled probe script to check that a plugin can ex
 
 # Plugin script
 
-Probe 3 of 3. Verifies that a plugin can execute a script it ships, and that
+Probe: bundled scripts. Verifies that a plugin can execute a script it ships, and that
 `${CLAUDE_PLUGIN_ROOT}` resolves to the installed plugin directory.
 
 Run:

@@ -5,7 +5,7 @@ description: Look up a verification code from the test-lab codebook. Use when th
 
 # Plugin codebook
 
-Probe 2 of 3. Verifies that a skill can read a file bundled next to it inside the plugin,
+Probe: bundled reference files. Verifies that a skill can read a file bundled next to it,
 which is the mechanism every real skill uses for references, templates and checklists.
 
 1. Read `references/codebook.md`, which sits next to this `SKILL.md`. Do not answer from

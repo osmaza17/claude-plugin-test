@@ -1,7 +1,7 @@
 {
   "name": "test-lab",
   "description": "Seven probe skills that each verify a different plugin mechanism: skill loading, bundled reference files, bundled scripts, update propagation, sync completeness, a combined selftest, and a bundled changelog.",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "author": {
     "name": "osmaza17"
   }

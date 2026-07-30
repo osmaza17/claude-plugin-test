@@ -2,6 +2,13 @@
 
 Newest first.
 
+## 1.4.0
+
+No new skills, same as 1.3.0. A second consecutive version bump, to check that the update
+path keeps working once it has worked once. Codebook gained `lima` (`LM-4460`) as the 1.4.0
+stale-file marker, and a note that the sibling plugin's keywords must NOT resolve here.
+
+
 ## 1.3.0
 
 No new skills. A version bump on purpose, to test whether Cowork offers an update button or

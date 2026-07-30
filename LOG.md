@@ -2,6 +2,32 @@
 
 Newest entry first.
 
+## 30 07 2026 — test-lab 1.4.0, a second consecutive bump
+
+Same shape as 1.3.0 and for a related but distinct reason: 1.3.0 tested whether the update
+path works at all once the GitHub App has access. 1.4.0 tests whether it keeps working, on
+a marketplace that has already synced once. A path that works on the first try and silently
+stops afterwards is a real failure mode, and one bump cannot tell them apart.
+
+Decisions:
+
+- Still no new skills. Two bumps of pure version, so the variable under test stays the
+  version number and nothing else.
+- Marker keyword is `lima` (`LM-4460`). Skipped `india`, `juliet` and `kilo` on purpose:
+  those belong to `test-lab-2`'s codebook, and reusing them here would destroy the
+  collision probe, since a correct answer and a cross-plugin leak would look identical.
+  Wrote that reasoning into `codebook.md` so the next person does not undo it.
+
+Pending:
+
+- Known debt: `annex-codebook` in `test-lab-2` lists the sibling's code prefixes it must
+  never return, and that list stopped at `GF-`. It does not know about `HT-` or `LM-`.
+  Fixing it means touching `test-lab-2`, which would need its own version bump, so it was
+  left alone rather than shipping a change that does not propagate. The probe still works
+  for the prefixes it does list.
+- Local install deliberately left at 1.2.0 since 1.3.0, as a control group against Cowork.
+
+
 ## 30 07 2026 — test-lab 1.3.0, and the GitHub App finding
 
 Cowork refused to auto-sync the marketplace with: *"La synchronisation automatique

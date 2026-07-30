@@ -1,0 +1,16 @@
+{
+  "name": "osmaza-plugin-test-marketplace",
+  "description": "Test marketplace used to verify Claude Code plugin distribution end to end.",
+  "owner": {
+    "name": "osmaza17",
+    "url": "https://github.com/osmaza17"
+  },
+  "plugins": [
+    {
+      "name": "test-lab",
+      "source": "./plugins/test-lab",
+      "description": "Three probe skills that each verify a different plugin mechanism: skill loading, bundled reference files, and bundled scripts.",
+      "version": "1.0.0"
+    }
+  ]
+}

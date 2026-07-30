@@ -1,0 +1,8 @@
+{
+  "name": "test-lab",
+  "description": "Three probe skills that each verify a different plugin mechanism: skill loading, bundled reference files, and bundled scripts.",
+  "version": "1.0.0",
+  "author": {
+    "name": "osmaza17"
+  }
+}
